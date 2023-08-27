@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 addItemButton.setVisibility(View.GONE);
                 datePicker.setVisibility(View.VISIBLE);
                 nextButton.setVisibility(View.VISIBLE);
+                filterButton.setVisibility(View.GONE);
             }
         });
 

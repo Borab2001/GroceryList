@@ -36,7 +36,8 @@
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_gravity="center_horizontal"
         android:visibility="gone"
         android:padding="16dp"
@@ -59,7 +60,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:hint="Grocery Item"
+        android:hint="Grocery Item Name"
+        android:padding="16dp"
+        android:layout_margin="16dp"
         android:visibility="gone"/>
 
     <Button
