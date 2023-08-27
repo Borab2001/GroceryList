@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,6 +93,15 @@ public class MainActivity extends AppCompatActivity {
                 String item = date + " - " + groceryItem.getText().toString();
                 if (!item.isEmpty()) {
                     items.add(item);
+
+                    // Sort the list
+                    Collections.sort(items, new Comparator<String>() {
+                        @Override
+                        public int compare(String item1, String item2) {
+                            return item1.compareTo(item2);
+                        }
+                    });
+
                     adapter.notifyDataSetChanged();
                 }
 
