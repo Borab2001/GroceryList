@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/header"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
         android:text="My Grocery List"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:padding="16dp"/>
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listView"
@@ -64,4 +64,33 @@
         android:padding="16dp"
         android:visibility="gone"/>
 
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addItemButton"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#9E9E9E"
+        android:padding="16dp"
+        android:text="Filter" />
+
+    <Button
+        android:id="@+id/filterDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:text="Filter Date"
+        android:padding="16dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/resetFilterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterDateButton"
+        android:layout_centerHorizontal="true"
+        android:text="Reset Filter"
+        android:padding="16dp"
+        android:visibility="gone"/>
 </LinearLayout>
