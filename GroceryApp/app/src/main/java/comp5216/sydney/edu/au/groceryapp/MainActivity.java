@@ -54,12 +54,14 @@ public class MainActivity extends AppCompatActivity {
         addItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Hide header, list, and Add Item button, then show date picker and Next button
+                // Hide
                 listView.setVisibility(View.GONE);
                 addItemButton.setVisibility(View.GONE);
+                filterButton.setVisibility(View.GONE);
+
+                // Display
                 datePicker.setVisibility(View.VISIBLE);
                 nextButton.setVisibility(View.VISIBLE);
-                filterButton.setVisibility(View.GONE);
 
                 // Update header text
                 header.setText("Add a date");
@@ -69,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Hide date picker and next button
+                // Hide
                 datePicker.setVisibility(View.GONE);
                 nextButton.setVisibility(View.GONE);
 
-                // Show grocery item input and add button
+                // Display
                 groceryItem.setVisibility(View.VISIBLE);
                 addButton.setVisibility(View.VISIBLE);
 
@@ -115,10 +117,13 @@ public class MainActivity extends AppCompatActivity {
                     imm.hideSoftInputFromWindow(groceryItem.getWindowToken(), 0);
                 }
 
-                // Reset views
                 groceryItem.setText("");
+
+                // Hide
                 groceryItem.setVisibility(View.GONE);
                 addButton.setVisibility(View.GONE);
+
+                // Display
                 listView.setVisibility(View.VISIBLE);
                 addItemButton.setVisibility(View.VISIBLE);
                 filterButton.setVisibility(View.VISIBLE);
@@ -128,12 +133,12 @@ public class MainActivity extends AppCompatActivity {
         filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Hide header, list, addItem and filter buttons
+                // Hide
                 listView.setVisibility(View.GONE);
                 addItemButton.setVisibility(View.GONE);
                 filterButton.setVisibility(View.GONE);
 
-                // Show date picker and filterDate button
+                // Display
                 datePicker.setVisibility(View.VISIBLE);
                 filterDateButton.setVisibility(View.VISIBLE);
 
@@ -177,11 +182,14 @@ public class MainActivity extends AppCompatActivity {
                 // Reset header text
                 header.setText("My Grocery List");
 
-                // Reset views
+                // Hide
+                resetFilterButton.setVisibility(View.GONE);
+
+                //Display
                 listView.setVisibility(View.VISIBLE);
                 addItemButton.setVisibility(View.VISIBLE);
                 filterButton.setVisibility(View.VISIBLE);
-                resetFilterButton.setVisibility(View.GONE);
+
                 groceryItem.setText("");
             }
         });
